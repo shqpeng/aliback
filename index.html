@@ -10,24 +10,7 @@
   <body>
     <script src="https://cdn.bootcss.com/eruda/1.5.2/eruda.min.js"></script>
     <script>
-      eruda.init();
-      function ready(callback) {
-        alert('调用')
-        // 如果jsbridge已经注入则直接调用
-        if (window.AlipayJSBridge) {
-          alert('有')
-          callback && callback();
-        } else {
-          alert('没有')
-          // 如果没有注入则监听注入的事件
-          document.addEventListener('AlipayJSBridgeReady', callback, false);
-        }
-      }
-      ready(function () {
-        AlipayJSBridge.call('toast', {
-          content: 'hello'
-        });
-      });
+ window.location.href="alipays://platformapi/startapp?appId=2019071265859126&page=pages/index/index"
     </script>
 
 </html>
